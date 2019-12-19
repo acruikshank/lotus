@@ -13,7 +13,7 @@ require (
 	github.com/filecoin-project/chain-validation v0.0.3
 	github.com/filecoin-project/filecoin-ffi v0.0.0-20191204125133-ebb3e13addf1
 	github.com/filecoin-project/go-amt-ipld v0.0.0-20191205011053-79efc22d6cdc
-	github.com/filecoin-project/go-statestore v0.0.0-20191219193906-3f75d92ee13b
+	github.com/filecoin-project/go-statestore v0.0.0-20191219195854-7a95521e8f15
 	github.com/gbrlsnchs/jwt/v3 v3.0.0-beta.1
 	github.com/go-ole/go-ole v1.2.4 // indirect
 	github.com/google/go-cmp v0.3.1 // indirect
@@ -97,7 +97,7 @@ require (
 	go.uber.org/multierr v1.4.0
 	go.uber.org/zap v1.13.0
 	go4.org v0.0.0-20190313082347-94abd6928b1d // indirect
-	golang.org/x/crypto v0.0.0-20191206172530-e9b2fee46413 // indirect
+	golang.org/x/crypto v0.0.0-20191219195013-becbf705a915 // indirect
 	golang.org/x/lint v0.0.0-20191125180803-fdd1cda4f05f // indirect
 	golang.org/x/sys v0.0.0-20191218084908-4a24b4065292 // indirect
 	golang.org/x/time v0.0.0-20190308202827-9d24e82272b4
