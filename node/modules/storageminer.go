@@ -5,6 +5,7 @@ import (
 	"math"
 	"reflect"
 
+	sectorbuilder "github.com/filecoin-project/go-sectorbuilder"
 	"github.com/ipfs/go-bitswap"
 	"github.com/ipfs/go-bitswap/network"
 	"github.com/ipfs/go-blockservice"
@@ -24,7 +25,6 @@ import (
 	"github.com/filecoin-project/lotus/chain/deals"
 	"github.com/filecoin-project/lotus/chain/gen"
 	"github.com/filecoin-project/lotus/datatransfer"
-	"github.com/filecoin-project/lotus/lib/sectorbuilder"
 	"github.com/filecoin-project/lotus/lib/statestore"
 	"github.com/filecoin-project/lotus/miner"
 	"github.com/filecoin-project/lotus/node/modules/dtypes"

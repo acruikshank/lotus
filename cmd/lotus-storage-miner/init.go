@@ -11,6 +11,7 @@ import (
 	"path/filepath"
 	"strconv"
 
+	sectorbuilder "github.com/filecoin-project/go-sectorbuilder"
 	"github.com/ipfs/go-datastore"
 	badger "github.com/ipfs/go-ds-badger"
 	"github.com/libp2p/go-libp2p-core/crypto"
@@ -28,7 +29,6 @@ import (
 	lcli "github.com/filecoin-project/lotus/cli"
 	"github.com/filecoin-project/lotus/genesis"
 	"github.com/filecoin-project/lotus/lib/cborutil"
-	"github.com/filecoin-project/lotus/lib/sectorbuilder"
 	"github.com/filecoin-project/lotus/miner"
 	"github.com/filecoin-project/lotus/node/modules"
 	"github.com/filecoin-project/lotus/node/modules/dtypes"

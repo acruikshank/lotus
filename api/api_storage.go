@@ -3,8 +3,9 @@ package api
 import (
 	"context"
 
+	sectorbuilder "github.com/filecoin-project/go-sectorbuilder"
+
 	"github.com/filecoin-project/lotus/chain/address"
-	"github.com/filecoin-project/lotus/lib/sectorbuilder"
 )
 
 // alias because cbor-gen doesn't like non-alias types

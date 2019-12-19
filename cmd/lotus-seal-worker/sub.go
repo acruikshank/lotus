@@ -5,9 +5,10 @@ import (
 	"golang.org/x/xerrors"
 	"net/http"
 
+	sectorbuilder "github.com/filecoin-project/go-sectorbuilder"
+
 	lapi "github.com/filecoin-project/lotus/api"
 	"github.com/filecoin-project/lotus/build"
-	"github.com/filecoin-project/lotus/lib/sectorbuilder"
 )
 
 type worker struct {

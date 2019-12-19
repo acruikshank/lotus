@@ -14,6 +14,7 @@ import (
 	"time"
 
 	"github.com/docker/go-units"
+	sectorbuilder "github.com/filecoin-project/go-sectorbuilder"
 	ffi "github.com/filecoin-project/filecoin-ffi"
 	"github.com/ipfs/go-datastore"
 	logging "github.com/ipfs/go-log"
@@ -25,7 +26,6 @@ import (
 	"github.com/filecoin-project/lotus/chain/address"
 	"github.com/filecoin-project/lotus/chain/types"
 	"github.com/filecoin-project/lotus/genesis"
-	"github.com/filecoin-project/lotus/lib/sectorbuilder"
 )
 
 var log = logging.Logger("lotus-bench")

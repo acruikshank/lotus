@@ -83,6 +83,10 @@ github.com/filecoin-project/chain-validation v0.0.3 h1:luT/8kJ0WdMIqQ9Bm31W4JkuY
 github.com/filecoin-project/chain-validation v0.0.3/go.mod h1:NCEGFjcWRjb8akWFSOXvU6n2efkWIqAeOKU6o5WBGQw=
 github.com/filecoin-project/go-amt-ipld v0.0.0-20191205011053-79efc22d6cdc h1:cODZD2YzpTUtrOSxbEnWFcQHidNRZiRdvLxySjGvG/M=
 github.com/filecoin-project/go-amt-ipld v0.0.0-20191205011053-79efc22d6cdc/go.mod h1:KsFPWjF+UUYl6n9A+qbg4bjFgAOneicFZtDH/LQEX2U=
+github.com/filecoin-project/go-sectorbuilder v0.0.0-20190808030122-94f958f1d41a h1:PG9M6KaizmQPQ5c5MyJrwS5jD2NJPyfYaIfoYoZqfRs=
+github.com/filecoin-project/go-sectorbuilder v0.0.0-20190808030122-94f958f1d41a/go.mod h1:TuI4LKredJmhGmGT7LEDehejraapnJwwAVD9seNR9WY=
+github.com/filecoin-project/go-sectorbuilder v0.0.0-20191126221632-4c9919a1c4fe h1:bkVofm6oHagxZwzZbh3nDUH8lkhjCRe4S6AevAIxRNg=
+github.com/filecoin-project/go-sectorbuilder v0.0.0-20191126221632-4c9919a1c4fe/go.mod h1:NulUuak/mLUOIX+p5p6E9fCaR9VekiU1wpTgUB+DPgw=
 github.com/fsnotify/fsnotify v1.4.7 h1:IXs+QLmnXW2CcXuY+8Mzv/fWEsPGWxqefPtCP5CnV9I=
 github.com/fsnotify/fsnotify v1.4.7/go.mod h1:jwhsz4b93w/PPRr/qN1Yymfu8t87LnFCMoQvtojpjFo=
 github.com/gbrlsnchs/jwt/v3 v3.0.0-beta.1 h1:EzDjxMg43q1tA2c0MV3tNbaontnHLplHyFF6M5KiVP0=
@@ -469,6 +473,7 @@ github.com/mattn/go-colorable v0.0.9/go.mod h1:9vuHe8Xs5qXnSaW/c/ABM9alt+Vo+STaO
 github.com/mattn/go-colorable v0.1.1/go.mod h1:FuOcm+DKB9mbwrcAfNl7/TZVBZ6rcnceauSikq3lYCQ=
 github.com/mattn/go-colorable v0.1.2 h1:/bC9yWikZXAL9uJdulbSfyVNIR3n3trXl+v8+1sx8mU=
 github.com/mattn/go-colorable v0.1.2/go.mod h1:U0ppj6V5qS13XJ6of8GYAs25YV2eR4EVcfRqFIhoBtE=
+github.com/mattn/go-colorable v0.1.4/go.mod h1:U0ppj6V5qS13XJ6of8GYAs25YV2eR4EVcfRqFIhoBtE=
 github.com/mattn/go-isatty v0.0.4/go.mod h1:M+lRXTBqGeGNdLjl/ufCoiOlB5xdOkqRJdNxMWT7Zi4=
 github.com/mattn/go-isatty v0.0.5/go.mod h1:Iq45c/XA43vh69/j3iqttzPXn0bhXyGjM0Hdxcsrc5s=
 github.com/mattn/go-isatty v0.0.8/go.mod h1:Iq45c/XA43vh69/j3iqttzPXn0bhXyGjM0Hdxcsrc5s=
@@ -698,6 +703,8 @@ golang.org/x/net v0.0.0-20190522155817-f3200d17e092/go.mod h1:HSz+uSET+XFnRR8LxR
 golang.org/x/net v0.0.0-20190611141213-3f473d35a33a/go.mod h1:z5CRVTTTmAJ677TzLLGU+0bjPO0LkuOLi4/5GtJWs/s=
 golang.org/x/net v0.0.0-20190620200207-3b0461eec859 h1:R/3boaszxrf1GEUWTVDzSKVwLmSJpwZ1yqXm8j0v2QI=
 golang.org/x/net v0.0.0-20190620200207-3b0461eec859/go.mod h1:z5CRVTTTmAJ677TzLLGU+0bjPO0LkuOLi4/5GtJWs/s=
+golang.org/x/net v0.0.0-20190923162816-aa69164e4478 h1:l5EDrHhldLYb3ZRHDUhXF7Om7MvYXnkV9/iQNo1lX6g=
+golang.org/x/net v0.0.0-20190923162816-aa69164e4478/go.mod h1:z5CRVTTTmAJ677TzLLGU+0bjPO0LkuOLi4/5GtJWs/s=
 golang.org/x/oauth2 v0.0.0-20180821212333-d2e6202438be/go.mod h1:N/0e6XlmueqKjAGxoOufVs8QHGRruUQn6yWY3a++T0U=
 golang.org/x/oauth2 v0.0.0-20190226205417-e64efc72b421/go.mod h1:gOpvHmFTYa4IltrdGE7lF6nIHvwfUNPOp7c8zoXwtLw=
 golang.org/x/sync v0.0.0-20180314180146-1d60e4601c6f/go.mod h1:RxMgew5VJxzue5/jJTE5uejpjVlOe/izrB70Jof72aM=
