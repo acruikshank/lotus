@@ -5,7 +5,7 @@ import (
 
 	sectorbuilder "github.com/filecoin-project/go-sectorbuilder"
 
-	"github.com/filecoin-project/lotus/chain/address"
+	"github.com/filecoin-project/go-address"
 )
 
 // alias because cbor-gen doesn't like non-alias types

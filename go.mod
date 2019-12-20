@@ -11,6 +11,7 @@ require (
 	github.com/docker/go-units v0.4.0
 	github.com/filecoin-project/chain-validation v0.0.3
 	github.com/filecoin-project/filecoin-ffi v0.0.0-20191219131535-bb699517a590
+	github.com/filecoin-project/go-address v0.0.0-20191219011437-af739c490b4f
 	github.com/filecoin-project/go-amt-ipld v0.0.0-20191205011053-79efc22d6cdc
 	github.com/filecoin-project/go-sectorbuilder v0.0.0-20191220163446-1b44c19a72e9
 	github.com/gbrlsnchs/jwt/v3 v3.0.0-beta.1
