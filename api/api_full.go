@@ -36,6 +36,7 @@ import (
 type FullNode interface {
 	Common
 	TokenAPI
+	BountyAPI
 
 	// MethodGroup: Chain
 	// The Chain method group contains methods for interacting with the

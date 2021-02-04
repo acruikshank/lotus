@@ -30,6 +30,7 @@ type FullNodeAPI struct {
 	full.SyncAPI
 	full.BeaconAPI
 	full.TokenAPI
+	full.BountyAPI
 
 	DS dtypes.MetadataDS
 }

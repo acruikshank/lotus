@@ -26,6 +26,7 @@ import (
 	"github.com/filecoin-project/go-state-types/dline"
 	stnetwork "github.com/filecoin-project/go-state-types/network"
 	"github.com/filecoin-project/lotus/chain/actors/builtin/token"
+	"github.com/filecoin-project/lotus/chain/actors/builtin/bounty"
 	"github.com/filecoin-project/lotus/extern/sector-storage/fsutil"
 	"github.com/filecoin-project/lotus/extern/sector-storage/sealtasks"
 	"github.com/filecoin-project/lotus/extern/sector-storage/stores"
@@ -278,6 +279,10 @@ type FullNodeStruct struct {
 		TokenTransfer      func(ctx context.Context, token address.Address, from, to address.Address, amount abi.TokenAmount) (cid.Cid, error)         `perm:"sign"`
 		TokenTransferFrom  func(ctx context.Context, token address.Address, holder, from, to address.Address, amount abi.TokenAmount) (cid.Cid, error) `perm:"sign"`
 		TokenApprove       func(ctx context.Context, token address.Address, holder, spender address.Address, amount abi.TokenAmount) (cid.Cid, error)  `perm:"sign"`
+
+		BountyInfo func(ctx context.Context, bounty address.Address) (*bounty.Info, error)
+		BountyCreate func(ctx context.Context, creator address.Address, pieceCid cid.Cid, token *address.Address, from address.Address, value abi.TokenAmount, duration abi.ChainEpoch, bounties uint64) (cid.Cid, error)
+		BountyClaim func(ctx context.Context, bountyAddress, from address.Address, newDealId *abi.DealID) (cid.Cid, error)
 
 		CreateBackup func(ctx context.Context, fpath string) error `perm:"admin"`
 	}
@@ -1284,6 +1289,18 @@ func (c *FullNodeStruct) TokenTransferFrom(ctx context.Context, token address.Ad
 
 func (c *FullNodeStruct) TokenApprove(ctx context.Context, token address.Address, holder, spender address.Address, amount abi.TokenAmount) (cid.Cid, error) {
 	return c.Internal.TokenApprove(ctx, token, holder, spender, amount)
+}
+
+func (c *FullNodeStruct) BountyInfo(ctx context.Context, token address.Address) (*bounty.Info, error) {
+	return c.Internal.BountyInfo(ctx, token)
+}
+
+func (c *FullNodeStruct) BountyCreate(ctx context.Context, creator address.Address, pieceCid cid.Cid, token *address.Address, from address.Address, value abi.TokenAmount, duration abi.ChainEpoch, bounties uint64) (cid.Cid, error) {
+	return c.Internal.BountyCreate(ctx, creator, pieceCid, token, from, value, duration, bounties)
+}
+
+func (c *FullNodeStruct) BountyClaim(ctx context.Context, bountyAddr, from address.Address, newDealId *abi.DealID) (cid.Cid, error) {
+	return c.Internal.BountyClaim(ctx, bountyAddr, from, newDealId)
 }
 
 func (c *FullNodeStruct) CreateBackup(ctx context.Context, fpath string) error {
