@@ -3,25 +3,47 @@
 package build
 
 import (
-	"github.com/filecoin-project/specs-actors/actors/abi"
-	"github.com/filecoin-project/specs-actors/actors/abi/big"
-	"github.com/filecoin-project/specs-actors/actors/builtin/miner"
-	"github.com/filecoin-project/specs-actors/actors/builtin/power"
-	"github.com/filecoin-project/specs-actors/actors/builtin/verifreg"
+	"github.com/filecoin-project/go-state-types/abi"
+	"github.com/filecoin-project/lotus/chain/actors/policy"
 )
 
-func init() {
-	power.ConsensusMinerMinPower = big.NewInt(2048)
-	miner.SupportedProofTypes = map[abi.RegisteredProof]struct{}{
-		abi.RegisteredProof_StackedDRG2KiBSeal: {},
-	}
-	verifreg.MinVerifiedDealSize = big.NewInt(256)
+const BootstrappersFile = ""
+const GenesisFile = ""
+
+const UpgradeBreezeHeight = -1
+const BreezeGasTampingDuration = 0
+
+const UpgradeSmokeHeight = -1
+const UpgradeIgnitionHeight = -2
+const UpgradeRefuelHeight = -3
+const UpgradeTapeHeight = -4
+
+const UpgradeActorsV2Height = 10
+const UpgradeLiftoffHeight = -5
+
+const UpgradeKumquatHeight = 15
+const UpgradeCalicoHeight = 20
+const UpgradePersianHeight = 25
+const UpgradeOrangeHeight = 27
+const UpgradeClausHeight = 30
+
+const UpgradeActorsV3Height = 35
+
+var DrandSchedule = map[abi.ChainEpoch]DrandEnum{
+	0: DrandMainnet,
 }
 
-// Seconds
-const BlockDelay = 2
+func init() {
+	policy.SetSupportedProofTypes(abi.RegisteredSealProof_StackedDrg2KiBV1)
+	policy.SetConsensusMinerMinPower(abi.NewStoragePower(2048))
+	policy.SetMinVerifiedDealSize(abi.NewStoragePower(256))
 
-const PropagationDelay = 3
+	BuildType |= Build2k
+}
+
+const BlockDelaySecs = uint64(4)
+
+const PropagationDelaySecs = uint64(1)
 
 // SlashablePowerDelay is the number of epochs after ElectionPeriodStart, after
 // which the miner is slashed
@@ -31,3 +53,5 @@ const SlashablePowerDelay = 20
 
 // Epochs
 const InteractivePoRepConfidence = 6
+
+const BootstrapPeerThreshold = 1
